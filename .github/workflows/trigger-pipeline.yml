@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: Pipelines Demo
 on: [push]
 jobs:
   Trigger-Reimage-Pipeline:
@@ -12,5 +12,5 @@ jobs:
         run: |
           curl $PIPELINE_URL \
             -H "Content-Type: application/json" \
-            -d '{ "secret": $PIPELINE_SECRET}' \
+            -d '{ "secret": \$PIPELINE_SECRET}' \
             -X POST
