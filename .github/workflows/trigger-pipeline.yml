@@ -4,4 +4,12 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run:
+      - name: Reimage Pipeline Trigger
+        env:
+          PIPELINE_SECRET: ${{ secrets.PIPELINE_SECRET}}
+          PIPELINE_URL: ${{ secrets.PIPELINE_URL }}
+        run: |
+          curl $PIPELINE_URL \
+            -H "Content-Type: application/json" \
+            -d '{ "secret": $PIPELINE_SECRET}' \
+            -X POST
