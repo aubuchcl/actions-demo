@@ -8,7 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>This was changed and deployed through GH Actions and Cycle.</p>
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
+          Learn React THIS IS A CHANGE
         </a>
       </header>
     </div>
