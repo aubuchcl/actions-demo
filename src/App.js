@@ -6,9 +6,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>This was changed and deployed through GH Actions and Cycle.</p>
+        <p>Hart Demo</p>
         <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React THIS IS A CHANGE
+          Learn React
         </a>
       </header>
     </div>
