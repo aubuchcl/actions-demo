@@ -6,11 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Reimage Pipeline Trigger
-        env:
-          PIPELINE_SECRET: ${{ secrets.PIPELINE_SECRET}}
-          PIPELINE_URL: ${{ secrets.PIPELINE_URL }}
         run: |
-          curl $PIPELINE_URL \
+          curl https://api.cycle.io/v1/pipelines/64add2eb41b1050168f8765a/trigger \
             -H "Content-Type: application/json" \
-            -d "{ \"secret\": \"$PIPELINE_SECRET\"}" \
+            -d "{ \"secret\": \"secret_DOqkaILjMU6EzlYN9hXIxijUz1hewrU8K1f28Vxly5DHW0psemlKE7n0qhGS\" }" \
             -X POST
